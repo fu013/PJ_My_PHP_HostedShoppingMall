@@ -1,0 +1,27 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Karla|Open+Sans:300,400,700&display=swap');
+html { font-size: 20px; }
+body { font-size: 1rem; margin: 0; padding: 0; font-weight: normal; font-family: 'Open Sans'; }
+
+/*footer CSS*/
+footer {     margin: 0 auto 150px;
+    border-top: 1px solid black;
+    clear: both;
+    text-align: center;
+    min-width: 1400px; }
+footer ul { padding: 0;}
+footer ul li { float: left; height: 227px; padding: 0 70px 0 55px;  }
+footer ul li:nth-child(1) { width: 274px; border-right: 1px solid #f5f5f5; }
+footer ul li:nth-child(2) { width: 174px; border-right: 1px solid #f5f5f5; }
+footer ul li:nth-child(2) i { font-size: 1.2rem; position: relative; top: 3px; }
+footer ul li:nth-child(3) { width: 224px; border-right: 1px solid #f5f5f5; }
+footer ul li:nth-child(4) { width: 224px; }
+footer p { font-size: 0.7rem; color: #444; }
+footer h5 { margin-bottom: 10px; font-size: 1.0rem; color: #444444; margin-top: 0; }
+footer h2 { padding: 0; margin: 0; font-size: 2.0rem;  }
+.footer_inner {
+	width: 1400px;
+    display: inline-block;
+    top: 50px;
+    position: relative;
+}

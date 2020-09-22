@@ -1,0 +1,29 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Karla|Open+Sans:300,400,700&display=swap');
+html { font-size: 20px; }
+body { font-size: 1rem; margin: 0; padding: 0; background: #fff; font-weight: normal; font-family: 'Open Sans'; }
+li { list-style: none; }
+a { text-decoration: none; }
+
+.current_div { width: 1000px; position: relative; }
+.current_div img { width: 200px; height: 200px; }
+.current_div .inner_img .check_box { position: absolute; left: 10px; top: 10px; width: 20px; height: 20px; background: #fff; color: #fff; }
+.current_div .inner_img { position: relative; }
+.current_div > ul { width: 100%; margin: 0; padding: 0; }
+.current_div > ul > li { display: inline-block; width: 23.99999%; height: 300px; margin: 0; padding: 0;}
+.current_div > ul > li > ul { margin: 0; padding: 0; }
+.current_div > ul > li > ul > li { display: block; font-size: 0.8rem; width: 100%; }
+.button_territory { position: absolute; right: 0; bottom: -80px; }
+button[class*="btn_select"] { width: 160px; height: 60px; }
+.btn_select_only { background: #fff; }
+.btn_select_delete { background: black; color: #fff; }
+.mypage .container { display: block; clear: both; text-align: center; border-top: 3px solid #f0ffff; margin: 120px auto 0;}
+
+/*Button of pagination except for Previous, Next*/
+section .page-item { display: inline-block; width: 40px; height: 40px; line-height: 40px; margin: 0 3px; }
+section .page-item > a { color: black; }
+section .page-item:hover { background: #ddddff; }
+/*Previous Button*/
+section .page-item:first-child {  width: 80px; height: 40px; line-height: 40px; margin: 0 6px; }
+/*Next Button*/
+section .page-item:last-child {  width: 80px; height: 40px; line-height: 40px; margin: 0 6px; }

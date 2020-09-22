@@ -1,0 +1,47 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Karla|Open+Sans:300,400,700&display=swap');
+html { font-size: 20px; }
+body { font-size: 1rem; margin: 0; padding: 0; font-weight: normal; font-family: 'Open Sans'; }
+li { list-style: none; }
+a { text-decoration: none; }
+.hide { display: none; }
+
+/*top_header CSS*/
+.main_header { width: 100%; */
+    background: #ffffff;
+    font-family: 'Open Sans', sans-serif;
+    display: block;
+    z-index: 100;
+    height: 60px;
+    border-bottom: 1px solid #e8d9d9; margin: 0 auto;
+    min-width: 1400px;}
+
+/*search_input & icon CSS*/
+.main_header .search_input { width: 80%; height: 28px; color: #373737; font-size: 13px;
+border: 1px solid #e8e8e8; background: #fff; text-decoration: none; text-indent: 10px;
+transition: all 0.5s; vertical-align: middle; border-radius: 3px; position: relative; bottom: 1.0rem; }
+input::-webkit-input-placeholder{color:#999; font-size:13px;}
+.main_header .search_icon { height: 28px; line-height: 28px; width: 80px; position: relative; bottom: 0.7rem; right: 0px;  text-align: center;}
+.main_header .xi-magnifier {font-size: 28px; }
+
+/*header_nav & sub menu CSS*/
+header > .header_wrap { position: relative; margin: 0 auto; }
+header > .header_wrap:after { content: ""; display: block; }
+header > .header_wrap nav { 
+    position: absolute;
+    padding: 0.5rem 3.5rem 0 0;
+    right: 0px;
+}
+header > .header_wrap nav > ul > li { float: left; font-family: 'Open Sans', sans-serif; }
+header > .header_wrap nav > ul > li > a { font-family: 'Open Sans', sans-serif; display: block; padding: 0 1.25rem 0;  
+height: 3.0rem; font-size: 0.6rem; color: pink; line-height: 0px; }
+header > .header_wrap nav > ul > li > a:hover { color: deepskyblue; }
+/*header > .header_wrap > nav > ul > li > a { width: 60px; }*/
+header > .header_wrap > nav > ul > li > a { display: none;}
+header > .header_wrap > nav > ul > li > a:nth-child(1) {display: block; color: #333;}
+header > .header_wrap nav > ul > li a:nth-child(1):hover { color: red; }
+header > .header_wrap > nav > ul > li:hover a {display: block;}
+
+/*로고 CSS*/
+.logo_div { height: 240px; line-height: 10px; text-align: center; position: relative; min-width: 1400px; }
+.logo_div ul { display: inline-block; list-style-type: none; margin: 0; padding: 0; position: absolute; top: 50%; transform: translate(-50%,-50%); cursor: pointer; }

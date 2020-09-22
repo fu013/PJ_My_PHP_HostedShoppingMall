@@ -1,0 +1,88 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Karla|Open+Sans:300,400,700&display=swap');
+html { font-size: 20px; }
+body { font-size: 1rem; margin: 0; padding: 0; background: #fff; font-weight: normal; font-family: 'Open Sans'; }
+li { list-style: none; }
+a { text-decoration: none; }
+section { background: #fff; }
+img { border: 0 none; margin: 0; padding: 0; line-height: 0px; }
+
+/*인풋값 CSS*/
+input[type=text],
+input[type=email],
+input[type=password],
+input[type=search],
+input[type=number],
+input[type=date],
+input[type=tel],textarea{ width: 80%; height: 40px; color: #373737; font-size: 13px;
+border: 1px solid #e8e8e8; background: #fff; text-decoration: none; text-indent: 10px;
+transition: all 0.5s; vertical-align: middle; border-radius: 3px;}
+input::-webkit-input-placeholder{color:#999; font-size:13px;}
+
+/*회원가입 CSS*/
+.sign_up_wrapper { width: 700px; margin: 150px auto 50px; text-align: center; }
+.sign_up_wrapper h2 { font-size: 2rem; letter-spacing: 0.5rem; }
+.sign_up_wrapper h4 { text-align: left; position: relative; left: 70px; margin: 0 0 2px; font-weight: 300; font-size: 0.8rem; }
+.sign_up_wrapper p { text-align: left; position: relative; left: 70px; margin: 0 0 5px; font-size: 0.8rem; color: red; top: 3px; font-size: 0.6rem; }
+.sign_up_wrapper ul { display: inline; }
+.sign_up_wrapper ul li:first-child { margin-top: 0; }
+.sign_up_wrapper ul li:last-child { margin-bottom: 40px; }
+.sign_up_wrapper ul li { margin-top: 20px; }
+.sign_up_wrapper ul .input_id { position: relative; }
+.sign_up_wrapper ul .input_nickname { position: relative; }
+.sign_up_wrapper ul li .check_repeat_id,
+.sign_up_wrapper ul li .check_repeat_nickname,
+.sign_up_wrapper ul li .check_repeat_email {  position: absolute; height: 43.5px; background: red; color: white; }
+.sign_up_wrapper .register { width: 80%; height: 60px; margin-top: 20px; background: orange; color: white; border: 1px solid white; }
+.sign_up_wrapper .detailed { margin-top: 2px; }
+
+.sign_up_wrapper { margin: 150px 610px 100px;  }
+.sign_up_wrapper .agreement_photo { position: relative; right: 20px; margin-bottom: 50px; }
+.sign_up_wrapper .agreement_photo li { display: inline-block; padding: 0 60px; position: relative; }
+.sign_up_wrapper .agreement_photo li:nth-child(1):before { display: block; position: absolute; right: -49px; top: 30px; width: 98px; height: 1px; background: #dbdbdb; content: ''; opacity: 1;}
+.sign_up_wrapper .agreement_photo li:nth-child(2):before { display: block; position: absolute; right: -49px; top: 30px; width: 98px; height: 1px; background: #dbdbdb; content: ''; opacity: 1; }
+
+.sign_up_wrapper .xi-document { font-size: 3.5rem; }
+.sign_up_wrapper .xi-user-plus-o { font-size: 3.5rem; }
+.sign_up_wrapper .xi-registered { font-size: 3.5rem; }
+/*p[id^="alert_info"] { display: none; }*/
+.select_Fphone {
+	width: 86px;
+	height: 44px;
+    color: #373737;
+    font-size: 13px;
+    border: 1px solid #e8e8e8;
+    background: #fff;
+    text-decoration: none;
+    text-indent: 10px;
+    transition: all 0.5s;
+    vertical-align: middle;
+    border-radius: 3px;
+}
+.select_grade {
+    width: 86px;
+    height: 44px;
+    color: #373737;
+    font-size: 13px;
+    border: 1px solid #e8e8e8;
+    background: #fff;
+    text-decoration: none;
+    text-indent: 10px;
+    transition: all 0.5s;
+    vertical-align: middle;
+    border-radius: 3px;
+}
+
+.user_gender {
+    width: 86px;
+    height: 44px;
+    color: #373737;
+    font-size: 13px;
+    border: 1px solid #e8e8e8;
+    background: #fff;
+    text-decoration: none;
+    text-indent: 10px;
+    transition: all 0.5s;
+    vertical-align: middle;
+    border-radius: 3px;
+}

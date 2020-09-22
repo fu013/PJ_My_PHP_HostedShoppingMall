@@ -1,0 +1,27 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Karla|Open+Sans:300,400,700&display=swap');
+html { font-size: 20px; }
+body { font-size: 1rem; margin: 0; padding: 0; background: #fff; font-weight: normal; font-family: 'Open Sans'; }
+li { list-style: none; }
+a { text-decoration: none; }
+section { background: #fff; }
+img { border: 0 none; margin: 0; padding: 0; line-height: 0px; }
+.hide { display: none; }
+
+
+/*슬라이더 CSS*/
+.slider_news { display: block; width: 1325px; height: 1000px; z-index: -1; padding: 0; box-sizing: border-box;  margin: 82px auto 0; }
+.slider_news img { display: inline-block; }
+div.bx-controls-direction { display: none; }
+.bx-wrapper .bx-pager.bx-default-pager a { border-radius: 0px; width: 30px; height: 5px; }
+
+
+/*신상품 5장 CSS*/
+div[class*="square"] { width: 400px; height: 260px; display: inline-block; }
+.wrap { width: 1400px; margin: -70px auto 0; box-sizing: border-box; padding: 40px;}
+.wrap img { width: 100%; height: 100%; display: inline-block; }
+.left_wrap { width: 812px; display: inline-block; }
+.larger_one { width: 477px; height: 530px; float: right; display: inline-block; }.bx-wrapper img {
+  width: 100%;
+  display: block;
+}

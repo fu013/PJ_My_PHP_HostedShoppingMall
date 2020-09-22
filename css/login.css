@@ -1,0 +1,118 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css?family=Karla|Open+Sans:300,400,700&display=swap');
+/*font-family: 'Open Sans', sans-serif;*/
+/*font-family: 'Karla', sans-serif;*/
+
+body { font-family: 'Open Sans', sans-serif; }
+a { text-decoration: none; }
+
+/*pc 회원가입 팝업*/
+.popup_login #login_id[type=text],
+.popup_login #login_password[type=password] { width: 370px; height: 48px; color: #373737; font-size: 13px; border: none;
+border-bottom: 1px solid #999; background: #fff; text-decoration: none; text-indent: 20px;
+transition: all 0.5s; vertical-align: middle; border-radius: 3px;}
+.popup_login input:focus {  }
+.popup_login input::-webkit-input-placeholder{color:#999; font-size:13px;}
+.popup_login .summary { display: none; }
+.popup_login .hide { display: none; }
+.popup_login { display: none; position: fixed; left: 50%; top: 50%;
+ width: 525px; height: 475px; transform: translate(-50%, -50%); 
+ border: 1px solid black; padding: 30px 25px 30px; box-sizing: border-box; z-index: 100; background: #fff;}
+.popup_login h2 { padding: 0 0 42px; border-bottom: 2px solid #444; font-weight: normal; font-size: 36px; color: #222; text-align: center; line-height: 100%; }
+.popup_login .close { position:absolute; right: 0; top: 0; width:41px; height:41px; background: url(../img/close_use.png) no-repeat; color: transparent; right: 40px; top: 40px;}
+.popup_login .con { padding: 0 48px; border-bottom: 1px solid #e8e8e8; margin: 0 0 20px 0; }
+.dim { display: none; position: fixed; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 99;}
+
+.popup_login table.type1 th,
+.popup_login table.type1 td { padding: 0 0 5px; }
+.popup_login table.type1 th { font-size: 14px; color: #222; text-align: left; font-weight: normal; }
+.popup_login table.type1 th span { color: #de4f41; }
+.popup_login table.type1 th em { color: #999; }
+.popup_login table.type1 tr:last-child th,
+.popup_login table.type1 tr:last-child td { padding: 0 0 30px; }
+ 
+.popup_login .txt_center { text-align: center; padding: 5px 0; }
+.popup_login .colvalue { width: 100px; }
+.popup_login .btn_login { background: black; width: 80%; height: 50px; line-height: 50px; color: #fff; text-align: center; display: inline-block; }
+
+@media (min-width: 320px) and (max-width:767px) {
+.popup_login .colvalue { width: 100px; }
+.popup_login #login_id[type=text],
+.popup_login #login_password[type=text] { width: 120%; height: 20px; color: #373737; font-size: 13px;
+border: 1px solid #e8e8e8; background: #fff; text-decoration: none; text-indent: 20px;
+transition: all 0.5s; vertical-align: middle; border-radius: 3px;}
+.popup_login input::-webkit-input-placeholder{color:#999; font-size:13px;}
+body { box-sizing: border-box;}
+.summary { display: none; }
+.hide { display: none; }
+.popup_login { display: none; position: fixed; left: 50%; top: 50%;
+ width: 400px; height: 400px; transform: translate(-50%, -50%); 
+ border: 1px solid black; padding: 30px 25px 30px; box-sizing: border-box; z-index: 100; background: #fff;}
+
+ .popup_login h2 { padding: 0 0 42px; border-bottom: 2px solid #444; font-weight: normal; font-size: 36px; color: #222; text-align: center; line-height: 100%; letter-spacing: 0.5rem; }
+ .popup_login .close { position:absolute; right: 0; top: 0; width:41px; height:41px; background: url(../img/close_use.png) no-repeat; color: transparent; right: 40px; top: 40px;}
+ .popup_login .con { padding: 0 48px; border-bottom: 1px solid #e8e8e8; margin: 0 0 15px 0; }
+
+.dim { display: none; position: fixed; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 99;}
+
+ .popup_login table.type1 th,
+ .popup_logint table.type1 td { padding: 0 0 5px; }
+ .popup_login table.type1 th { font-size: 14px; color: #222; text-align: left; font-weight: normal; }
+ .popup_login table.type1 th span { color: #de4f41; }
+ .popup_login table.type1 th em { color: #999; }
+ .popup_login table.type1 tr:last-child th,
+ .popup_login table.type1 tr:last-child td { padding: 0 0 20px; }
+
+ 
+ .popup_login .btn_Login { background: black; width: 150px; height: 30px; line-height: 30px; color: #fff; text-align: center; display: inline-block; }
+ .popup_login .txt_center { text-align: center; padding: 0.65rem 0 0; }
+
+ }
+
+ .popup_login .form_frame {
+ 	border: 5px solid black;
+ }
+
+ .popup_login #id {
+ 	font-size: 1.0rem;
+ 	font-weight: 600;
+ }
+
+ .popup_login #password {
+   font-size: 1.0rem;
+   font-weight: 600;
+ }
+
+ .popup_login .reminder {
+ 	display: block;
+ 	position: relative;
+ 	height: 50px;
+ 	bottom: 5px;
+ 	font-size: 0.8rem;
+ 	font-weight: 300;
+ }
+ .popup_login .reminder li {
+   float: left;
+   padding: 10px 0 0 0;
+ }
+ .popup_login .remind_id {
+   position: absolute;
+   left: 45px;
+ } 
+ .popup_login .remind_password {
+   position: absolute;
+   right: 45px;
+ }
+ #vali_id {
+ 	line-height: 0;
+    color: red;
+    font-size: 15px;
+    display: none;
+ }
+ #vali_pw {
+ 	line-height: 0;
+    color: red;
+    font-size: 15px;
+    display: none;
+ }

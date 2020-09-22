@@ -1,0 +1,100 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Karla|Open+Sans:300,400,700&display=swap');
+html { font-size: 20px; }
+body { font-size: 1rem; margin: 0; padding: 0; font-weight: normal; font-family: 'Open Sans'; }
+li { list-style: none; }
+a { text-decoration: none; }
+.hide { display: none; }
+
+.content img { width: 75px; height: 75px; padding-left: 10px; }
+.content .list_td { position: relative;  }
+.content .list_td .dibs_checkbox { position: absolute; width: 15px; height: 15px; background: #fff; left: 0; }
+.content .list_td p { margin: 2px 0 0 0; padding: 0 0 0 10px; font-size: 0.7rem; font-weight: 300; }
+.content .paybox {
+    /* float: right; */
+    /* bottom: 200px; */
+    /* margin-top: 200px; */
+    bottom: 20%;
+    /* padding-top: 200px; */
+    left: 820px;
+    width: 300px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    padding: 30px;
+    padding-top: 30px;
+    font-size: 0.8rem;
+    position: absolute;
+}
+.content .paybox li { padding-bottom: 10px; }
+.content .paybox li:first-child { padding-bottom: 20px; }
+.content .paybox li:nth-child(3) { padding-bottom: 20px; }
+.content .paybox .title { color: black; font-weight: 600; }
+.content .paybox li .money { position: absolute; right: 30px; }
+.content .paybox li button { width: 238px; height: 40px; background: black; color: white; font-size: 0.6rem; text-align: center; }
+.content .select_list { text-align: left; margin: 20px 0 0 0; padding: 0; }
+.content .select_list button { width: 120px; height: 40px; margin-top: 15px; background: white; }
+.content .select_list li { display: inline-block;  }
+.content .select_all { text-align: left; font-size: 0.8rem; }
+
+/*Button of pagination except for Previous, Next*/
+section .page-item { display: inline-block; width: 40px; height: 40px; line-height: 40px; margin: 0 3px; }
+section .page-item > a { color: black; }
+section .page-item:hover { background: #ddddff; }
+/*Previous Button*/
+section .page-item:first-child {  width: 80px; height: 40px; line-height: 40px; margin: 0 6px; }
+/*Next Button*/
+section .page-item:last-child {  width: 80px; height: 40px; line-height: 40px; margin: 0 6px; }
+
+.mypage .content .order th:nth-child(1) { border-top: 1px dotted black; border-bottom: 1px dotted black; padding: 10px; font-size: 0.6rem; width: 10%; height: 30px; line-height: 30px; }
+.mypage .content .order th:nth-child(2) { border-top: 1px dotted black; border-bottom: 1px dotted black; padding: 10px; font-size: 0.6rem; width: 10%; height: 30px; line-height: 30px; }
+.mypage .content .order th:nth-child(3) { border-top: 1px dotted black; border-bottom: 1px dotted black; padding: 10px; font-size: 0.6rem; width: 15%; height: 30px; line-height: 30px; }
+.mypage .content .order th:nth-child(4) { border-top: 1px dotted black; border-bottom: 1px dotted black; padding: 10px; font-size: 0.6rem; width: 16.25%; height: 30px; line-height: 30px; }
+.mypage .content .order th:nth-child(5) { border-top: 1px dotted black; border-bottom: 1px dotted black; padding: 10px; font-size: 0.6rem; width: 16.25%; height: 30px; line-height: 30px; }
+.mypage .content .order th:nth-child(6) { border-top: 1px dotted black; border-bottom: 1px dotted black; padding: 10px; font-size: 0.6rem; width: 16.25%; height: 30px; line-height: 30px; }
+.mypage .content .order th:nth-child(7) { border-top: 1px dotted black; border-bottom: 1px dotted black; padding: 10px; font-size: 0.6rem; width: 16.25%; height: 30px; line-height: 30px; }
+.mypage .content { float: left; position: relative; display: block; margin-bottom: 100px; }
+.mypage .content .order {
+    width: 800px;
+    border-top: 1px solid black;
+    margin: 0;
+    padding: 0;
+}
+.mypage .content .order tbody {
+    width: 800px;
+}
+.mypage .content .order tbody tr {
+    width: 800px;
+
+}
+.mypage .content .order th:first-child, .mypage .content .order td:first-child {
+    border-bottom: 0.5px dotted black;
+    padding: 0px;
+    box-sizing: border-box;
+    height: 15px;
+    line-height: 15px;
+}
+
+.mypage .content .order th, .mypage .content .order td {
+    font-size: 0.8rem;
+    text-align: left;
+    vertical-align: middle;
+    text-align: center;
+    height: 1.5rem;
+    padding: 0;
+}
+.mypage .content .order th {
+    text-align: center;
+}
+
+.mypage .content .order th:nth-child(4), .mypage .content .order td:nth-child(4) {
+    padding: 0;
+}
+.mypage .content .order td:nth-child(5) {
+    padding: 0;
+}
+.mypage .content .order th:nth-child(3), .mypage .content .order td:nth-child(3) {
+    padding: 0;
+}
+.mypage .content .order th:nth-child(2), .mypage .content .order td:nth-child(2) {
+    padding: 0;
+}

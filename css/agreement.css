@@ -1,0 +1,346 @@
+@charset "utf-8";
+
+@font-face {
+font-family: 'KoreanPDSRR';
+src: url('../font/KoreanPDSRR.eot');
+src: url('../font/KoreanPDSRR.eot?#iefix') format('embedded-opentype'), /* ie 6,7,8 적용 embedded-opentype ie 8,9 적용 */
+url('../font/KoreanPDSRR.woff') format('woff'), /* ie 제외한 나머지 */
+url('../font/KoreanPDSRR.ttf') format('truetype'),
+url('../font/KoreanPDSRR.svg#KoreanPDSRR') format('svg'); /*모바일브라우져를 위해서*/
+font-weight: normal;
+font-style: normal;
+}
+@import url('http://fonts.googleapis.com/earlyaccess/nanumgothic.css');
+
+.agreement_wrapper  * {
+	box-sizing: border-box
+}
+
+.agreement_wrapper body {
+	font-size: 13px;
+	font-family: 'NanumBarunGothic',Arial,sans-serif;
+	background-color: #fff;
+	z-index: 0;
+}
+.agreement_wrapper a {
+	color: #000;
+	text-decoration: none;
+
+}
+.agreement_wrapper a:hover {
+	text-decoration: none;
+	color: #f67001;
+}
+.agreement_wrapper a:focus {
+	outline: none;
+}
+.agreement_wrapper h1 {
+	text-align: left;
+	margin-left: 10px;
+	font-family:"KoreanPDSRR";
+	cursor: default;
+	font-size:20px;
+}
+.agreement_wrapper h2 {
+	text-align: left;
+	font-family:'NanumBarunGothic';
+	cursor: default;
+	font-size:12px;
+}
+/* END demo styling */
+
+/*검색*/
+.agreement_wrapper input[name="search"] {
+  box-sizing: border-box;
+}
+
+.agreement_wrapper input[name="search"] {
+  border: 0px;
+  border-bottom: 1px solid #000;
+  font-size: 10px;
+  height: 20px;
+  padding: 0px 5px;
+  width: 10px;
+  color: #cecece;
+}
+.agreement_wrapper nput[name="search"]:focus {
+  outline: none;
+}
+
+.agreement_wrapper button[class="btn btn-search"] {
+  text-align: center;
+}
+.agreement_wrapper button[class="btn btn-search"]:focus {
+  outline: none;
+}
+.agreement_wrapper button[class="btn btn-search"].btn-search {
+  border: none;
+  height: 20px;
+  font-size: 8px;
+  padding: 4px 4px 4px 4px;
+  width: 20px;
+}
+
+.agreement_wrapper .sample {
+  float: center;
+  height: 20px;
+  margin: 0;
+  width: 160px;
+  margin-right: -10px;
+  width: 110px;
+}
+.agreement_wrapper .sample.eight input:focus {
+  width: 110px;
+}
+.agreement_wrapper .sample.eight input:focus ~ button.btn-search {
+  background: #fff;
+  color: #000;
+  left: 220px;
+  border-bottom: 1px solid #000;
+}
+.agreement_wrapper .sample.eight button.btn-search {
+  background: #fff;
+  left: 100px;
+  border-bottom: 1px solid #000;
+  border-radius: 0 0 0 0em;
+}
+
+
+
+
+
+/*위생관리*/
+.agreement_wrapper .hrsu{
+  font-size: 26px;
+  color: #a4a4a4;
+}
+
+
+.agreement_wrapper #hygimta
+{
+  border: 1px #cecece solid;
+  font-size: 16px;
+  width: 280px;
+  height:  220px;
+  margin: 20px 10px 20px 0;
+}
+
+@import url('http://fonts.googleapis.com/earlyaccess/nanumgothic.css');
+
+.agreement_wrapper a[class="dosirak"] {
+  text-decoration:none; 
+  font-family: 'NanumBarunGothic', sans-serif;
+  font-size:18px;
+  font-weight:normal;
+  color:#cecece;
+}
+
+.agreement_wrapper a[class="dosirak"]:visited, a[class="dosirak"]:link, a[class="dosirak"]:active {
+   
+  font-family: 'NanumBarunGothic', sans-serif;
+  font-size:18px;
+  font-weight:normal;
+  color:#cecece;
+}
+   
+.agreement_wrapper a[class="dosirak"]:hover{
+
+  font-family: 'NanumBarunGothic', sans-serif;
+  font-size:18px;
+  font-weight:normal;
+   
+  color:#f67001;
+
+}
+
+
+
+
+.agreement_wrapper .btn {
+
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+.agreement_wrapper .btn_rufwo{
+
+  font-family: 'NanumBarunGothic', sans-serif;
+  border:dotted 0px white; 
+  background:#f67001;color:#fff;    
+  border-radius:10px 10px 10px 10px;  
+  width:155px; height:50px;   
+  font-size: 20px;
+}
+
+
+.agreement_wrapper .btn_cancel{
+
+  font-family: 'NanumBarunGothic', sans-serif;
+  border:dotted 0px white;
+  background:#cecece;
+  color:#fff;     
+  width:155px; 
+  height:50px; 
+  font-size: 20px;
+}
+
+.agreement_wrapper .btn_order{ 
+
+  font-family: 'NanumBarunGothic', sans-serif;
+  border:dotted 0px white; 
+  background: black;
+  color:#fff;    
+  width:150px; height:50px;   
+  font-size: 15px;
+}
+
+.agreement_wrapper .btn_cancel1{
+  font-family: 'NanumBarunGothic', sans-serif;
+border:dotted 0px white; background:#cecece;color:#fff;   width:150px; height:50px;  font-size: 15px;
+}
+
+.agreement_wrapper .btn_submit{
+
+  font-family: 'NanumBarunGothic', sans-serif;
+border:dotted 0px white; background:#f67001;color:#fff;    border-radius:4px 4px 4px 4px;   width:79px; height:24px;  font-size: 12px;
+}
+
+.btn_cancel2{
+  font-family: 'NanumBarunGothic', sans-serif;
+border:dotted 0px white; background:#cecece;color:#fff;    border-radius:4px 4px 4px 4px;   width:79px; height:24px;  font-size: 12px;
+ }
+
+.agreement_wrapper .btn_select{
+  font-family: 'NanumBarunGothic', sans-serif;
+border:dotted 0px white; background:#f67001;color:#fff;    border-radius:4px 4px 4px 4px;   width:65px; height:26px;  font-size: 8.86px;
+}
+
+
+ .agreement_wrapper .btn_cancel3{
+  font-family: 'NanumBarunGothic', sans-serif;
+border:dotted 0px white; background:#cecece;color:#fff;    border-radius:4px 4px 4px 4px;   width:65px; height:26px;  font-size: 8.86px;
+}
+
+ .agreement_wrapper .btn_login{
+
+font-family: "FranklinGothicMedium";
+border:dotted 0px white; background:#f67001;color:#fff;    border-radius:10px 10px 10px 10px;   width:96px; height:76px;  font-size: 18px;
+
+}
+
+.agreement_wrapper .btn_cancel:hover,
+.agreement_wrapper .btn_cancel1:hover,
+.agreement_wrapper .btn_cancel2:hover,
+.agreement_wrapper .btn_cancel3:hover{
+  background:#f67001;
+}
+
+.agreement_wrapper #subbutton{
+  border-radius: 0.5em;
+  background-color: #f67001;
+  padding: 5px 20px; 
+  font-family: 'NanumBarunGothic', sans-serif;
+    border:dotted 0px white; 
+    color:#fff;      
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+.agreement_wrapper #join2{
+  background-color: #f67001;
+  padding: 5px; 
+  font-family: 'NanumBarunGothic', sans-serif;
+    border:solid 0px #cecece;     
+  font-size: 13px;
+  height: 40px;
+  width: 100px;
+  margin: 0;
+}
+
+.agreement_wrapper #join2no{
+  background-color: #fff;
+  padding: 5px; 
+  font-family: 'NanumBarunGothic', sans-serif;
+    border:solid 1px #cecece;   
+  font-size: 13px;
+  height: 40px;
+  width: 100px;
+  margin: 0;
+}
+.agreement_wrapper a[id="jo2"]{
+  color:#fff;
+}
+.agreement_wrapper a[id="jo2"]:hover{
+  color:#fff;
+}
+.agreement_wrapper #cddesign{
+  border:1px solid #cecece; 
+  padding:0px 0px 20px 20px ;
+  margin: 5px;
+}
+.agreement_wrapper input{
+  border: 1px #cecece solid;
+}
+
+.agreement_wrapper div.stepLine{
+  display: inline-block;
+  border-bottom: 1px solid #f67001;
+  height: 0;
+}
+
+.agreement_wrapper div.stepDot{
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+  border: 1px solid #cecece;
+  border-radius: 50%;
+  float: left;
+  margin: -8px 40px 0px 40px;
+  color:#cecece;
+}
+
+.agreement_wrapper div.stepDot.activeStep{
+  background-color:#f67001 !important;
+  border-color: #f67001 !important;
+  color: #f67001;
+}
+
+.agreement_wrapper div.stepDot.activeStep ~ div.stepDot{
+  background-color: #fff;
+  border: 1px solid #f67001;
+}
+
+.agreement_wrapper div.stepDot:after{
+  content:  attr(title);
+  white-space: nowrap;
+  position: relative;
+  top: 20px;
+  right: 8px;
+  font: 12px arial, sans-serif;  
+}
+
+.agreement_wrapper { margin: 150px 0 100px;  }
+.agreement_wrapper .agreement_photo { position: relative; right: 20px; margin-bottom: 50px; }
+.agreement_wrapper .agreement_photo li { display: inline-block; padding: 0 60px; position: relative; }
+.agreement_wrapper .agreement_photo li:nth-child(1):before { display: block; position: absolute; right: -49px; top: 30px; width: 98px; height: 1px; background: #dbdbdb; content: ''; opacity: 1;}
+.agreement_wrapper .agreement_photo li:nth-child(2):before { display: block; position: absolute; right: -49px; top: 30px; width: 98px; height: 1px; background: #dbdbdb; content: ''; opacity: 1; }
+
+.agreement_wrapper .xi-document { font-size: 3.5rem; }
+.agreement_wrapper .xi-user-plus-o { font-size: 3.5rem; }
+.agreement_wrapper .xi-registered { font-size: 3.5rem; }
