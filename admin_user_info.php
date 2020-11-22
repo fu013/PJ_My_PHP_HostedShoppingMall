@@ -52,16 +52,16 @@
             while($product_row_post = mysqli_fetch_array($product_select_result)) {   
                 echo "  
                         <tr>
-                        <td>$product_row_post['user_no']</td>
-                        <td>$product_row_post['user_id']</td>
-                        <td>$product_row_post['user_nickname']</td>
-                        <td>$product_row_post['user_pw']</td>
-                        <td>$product_row_post['user_name']</td>
-                        <td>$product_row_post['user_birth']</td>
-                        <td>$product_row_post['user_gender']</td>
-                        <td>$product_row_post['user_email']</td>
-                        <td>$product_row_post['user_phone']</td>
-                        <td>$product_row_post['comment']</td>
+                        <td>{$product_row_post['user_no']}</td>
+                        <td>{$product_row_post['user_id']}</td>
+                        <td>{$product_row_post['user_nickname']}</td>
+                        <td>{$product_row_post['user_pw']}</td>
+                        <td>{$product_row_post['user_name']}</td>
+                        <td>{$product_row_post['user_birth']}</td>
+                        <td>{$product_row_post['user_gender']}</td>
+                        <td>{$product_row_post['user_email']}</td>
+                        <td>{$product_row_post['user_phone']}</td>
+                        <td>{$product_row_post['comment']}</td>
                         </tr>
                     ";
         }

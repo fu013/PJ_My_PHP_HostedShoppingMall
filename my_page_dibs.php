@@ -49,14 +49,14 @@
                 echo "
                       <tr>
                         <td class='list_td'>
-                            <input type='checkbox' style='margin: 0; padding: 0;' class='dibs_checkbox'>
-                            <img src=$jjim_array['main_img_dir_name']>
-                            <td class='jjim_product_num'>$jjim_array['product_autoNum']</td>
-                            <td class='jjim_product_category'>$jjim_array['product_category']</td>
-                            <td class='jjim_product_name'>$jjim_array['product_name']</td>
-                            <td class='jjim_product_price'>$jjim_array['product_price']<text>원</text></td>
-                            <td class='jjim_product_size'>$jjim_array['product_size']</td>
-                            <td class='jjim_product_color'>$jjim_array['product_color']</td>
+                            <input type='checkbox' style='margin: 0; padding: 0;' class='dibs_checkbox'/>
+                            <img src={$jjim_array['main_img_dir_name']}/>
+                            <td class='jjim_product_num'>{$jjim_array['product_autoNum']}</td>
+                            <td class='jjim_product_category'>{$jjim_array['product_category']}</td>
+                            <td class='jjim_product_name'>{$jjim_array['product_name']}</td>
+                            <td class='jjim_product_price'>{$jjim_array['product_price']}<text>원</text></td>
+                            <td class='jjim_product_size'>{$jjim_array['product_size']}</td>
+                            <td class='jjim_product_color'>{$jjim_array['product_color']}</td>
                      ";
                }
             ?>

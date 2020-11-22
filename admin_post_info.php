@@ -50,14 +50,14 @@
             while($product_row_post = mysqli_fetch_array($product_select_result)) {   
                 echo "  
                         <tr>
-                            <td>$product_row_post['product_autoNum']</td>
-                            <td>$product_row_post['product_name']</td>
-                            <td>$product_row_post['product_category']</td>
-                            <td>$product_row_post['product_price']원</td>
-                            <td>$product_row_post['product_size']</td>
-                            <td>$product_row_post['product_like']</td>
-                            <td>$product_row_post['product_view']</td>
-                            <td>$product_row_post['created_at']</td>
+                            <td>{$product_row_post['product_autoNum']}</td>
+                            <td>{$product_row_post['product_name']}</td>
+                            <td>{$product_row_post['product_category']}</td>
+                            <td>{$product_row_post['product_price']}원</td>
+                            <td>{$product_row_post['product_size']}</td>
+                            <td>{$product_row_post['product_like']}</td>
+                            <td>{$product_row_post['product_view']}</td>
+                            <td>{$product_row_post['created_at']}</td>
                         </tr>
                     ";
         }
