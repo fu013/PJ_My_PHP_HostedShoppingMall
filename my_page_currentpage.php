@@ -45,7 +45,7 @@
                             <a href='/seungchan/shop_info.php?post_no=$val'><img src={$current_select_array['main_img_dir_name']}><input type='checkbox' class='check_box'></a>
                         </div>
                         <ul>
-                            <li class='product'>상품명 : {$current_select_array['product_name']}$val</li>
+                            <li class='product'>상품명 : {$current_select_array['product_name']}</li>
                             <li class='size'>사이즈 : {$current_select_array['product_size']}</li>
                             <li class='price'>가격 : {$current_select_array['product_price']}</li>
                         </ul>
