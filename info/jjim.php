@@ -21,7 +21,7 @@
             $select_product_array = mysqli_fetch_array($select_product_result);
 
             $insert_jjim = "insert into seungchanshop25.user_jjim(product_autoNum, user_id, main_img_dir_name, product_category, product_name, product_size, product_color, product_price)";
-            $insert_jjim .= "values ($select_product_array[product_autoNum], '$user_id', '$select_product_array[main_img_dir_name]', '$select_product_array[product_category]', '$select_product_array[product_name]', '$select_product_array[roduct_size]', '$select_product_array[product_color]', $select_product_array[product_price])";
+            $insert_jjim .= "values ($select_product_array[product_autoNum], '$user_id', '$select_product_array[main_img_dir_name]', '$select_product_array[product_category]', '$select_product_array[product_name]', '$select_product_array[product_size]', '$select_product_array[product_color]', $select_product_array[product_price])";
             mysqli_query($con, $insert_jjim);
             echo "찜목록에 등록되었습니다.";
         }
