@@ -1,10 +1,10 @@
 <?php include "info/jjim_pagination.php";?>
 <?php
- $con = mysqli_connect("localhost","seungchanshop25","tmdcks2416!","seungchanshop25");
+ $con = mysqli_connect("localhost","seungchanshop","tmdcks2416!","seungchanshop");
   session_start();
   if(isset($_SESSION["login_user_id"])) { 
       $user_id = $_SESSION["login_user_id"];
-      $sql = $like_select = "select * from seungchanshop25.user_jjim where user_id = '$user_id' order by created_at desc".' '.$sqlLimit;
+      $sql = $like_select = "select * from seungchanshop.user_jjim where user_id = '$user_id' order by created_at desc".' '.$sqlLimit;
       $result = mysqli_query($con, $sql);
   } else {
       $user_id = '';
@@ -50,7 +50,7 @@
                       <tr>
                         <td class='list_td'>
                             <input type='checkbox' style='margin: 0; padding: 0;' class='dibs_checkbox'/>
-                            <img src={$jjim_array['main_img_dir_name']}>
+                            <img src='{$jjim_array['main_img_dir_name']}'>
                             <td class='jjim_product_num'>{$jjim_array['product_autoNum']}</td>
                             <td class='jjim_product_category'>{$jjim_array['product_category']}</td>
                             <td class='jjim_product_name'>{$jjim_array['product_name']}</td>

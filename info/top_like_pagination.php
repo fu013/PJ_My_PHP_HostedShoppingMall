@@ -8,9 +8,9 @@
     }
     $onePage = 4;
 
-    $con = mysqli_connect("localhost","seungchanshop25","tmdcks2416!","seungchanshop25");
+    $con = mysqli_connect("localhost","seungchanshop","tmdcks2416!","seungchanshop");
     
-    $product_miyaong = "select count(*) count from seungchanshop25.product";
+    $product_miyaong = "select count(*) count from seungchanshop.product";
     $miyaong_result = mysqli_query($con, $product_miyaong);
     $product_count =  mysqli_fetch_array($miyaong_result);
     $product_count_row = $product_count['count'];

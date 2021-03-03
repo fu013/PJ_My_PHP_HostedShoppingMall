@@ -4,9 +4,9 @@
     if(isset($_SESSION["login_user_id"])) { 
         $user_id = $_SESSION["login_user_id"];
         $post_no  = $_POST["like_post_no"];
-        $con = mysqli_connect("localhost","seungchanshop25","tmdcks2416!","seungchanshop25");
+        $con = mysqli_connect("localhost","seungchanshop","tmdcks2416!","seungchanshop");
 
-        $like_select = "select count(*) count from seungchanshop25.user_like where product_autoNum = $post_no and user_id = '$user_id'";
+        $like_select = "select count(*) count from seungchanshop.user_like where product_autoNum = $post_no and user_id = '$user_id'";
         $like_select_result = mysqli_query($con, $like_select);
         $like_count_array =  mysqli_fetch_array($like_select_result);
         $like_count_row = $like_count_array['count'];
@@ -19,7 +19,7 @@
             $select_product_result = mysqli_query($con, $select_product);
             $select_product_array = mysqli_fetch_array($select_product_result);
 
-            $insert_like = "insert into seungchanshop25.user_like(product_autoNum, user_id, user_like, main_img_dir_name, product_name, product_size, product_price)";
+            $insert_like = "insert into seungchanshop.user_like(product_autoNum, user_id, user_like, main_img_dir_name, product_name, product_size, product_price)";
             $insert_like .= "values ($select_product_array[product_autoNum], '$user_id', 1, '$select_product_array[main_img_dir_name]', '$select_product_array[product_name]', '$select_product_array[product_size]', $select_product_array[product_price])";
             mysqli_query($con, $insert_like);
 

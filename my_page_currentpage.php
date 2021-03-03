@@ -1,5 +1,5 @@
 <?php
-  $con = mysqli_connect("localhost","seungchanshop25","tmdcks2416!","seungchanshop25");
+  $con = mysqli_connect("localhost","seungchanshop","tmdcks2416!","seungchanshop");
   $view_arr = explode(",",$_COOKIE['goods_view']);
   unset($view_arr[0]); // [1]부터 시작하므로 0번쨰 Null 배열인덱스 삭제후 rearrange
   $view_arr = array_values($view_arr);
@@ -42,7 +42,7 @@
                 echo "
                     <li class='current_product'>
                         <div class='inner_img'>
-                            <a href='/seungchan/shop_info.php?post_no=$val'><img src={$current_select_array['main_img_dir_name']}><input type='checkbox' class='check_box'></a>
+                            <a href='/seungchan/shop_info.php?post_no=$val'><img src='{$current_select_array['main_img_dir_name']}'><input type='checkbox' class='check_box'></a>
                         </div>
                         <ul>
                             <li class='product'>상품명 : {$current_select_array['product_name']}</li>

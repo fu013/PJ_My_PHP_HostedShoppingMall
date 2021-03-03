@@ -1,9 +1,9 @@
 <?php
     $post_no  = $_GET["post_no"];
-    $con = mysqli_connect("localhost","seungchanshop25","tmdcks2416!","seungchanshop25");
+    $con = mysqli_connect("localhost","seungchanshop","tmdcks2416!","seungchanshop");
 
     if(!empty($post_no) && empty($_COOKIE['qna_view' . $post_no])) { // 포스트넘버가 존재하고, 해당 쿠키가 비어있을때
-		$sql_view = "update seungchanshop25.qna set qna_hits = qna_hits + 1 where qna_no = $post_no"; // 조회수 + 1
+		$sql_view = "update seungchanshop.qna set qna_hits = qna_hits + 1 where qna_no = $post_no"; // 조회수 + 1
 		$result_view = mysqli_query($con, $sql_view); 
 		if(empty($result_view)) { // sql문을 실행하지않았다면
 ?>
@@ -17,24 +17,24 @@
 		}
     }
 
-    $select_qna = "select * from seungchanshop25.qna where qna_no = $post_no";
+    $select_qna = "select * from seungchanshop.qna where qna_no = $post_no";
     $select_qna_result = mysqli_query($con, $select_qna);
     $select_qna_result_array = mysqli_fetch_array($select_qna_result);
 
-    $review_select = "select * from seungchanshop25.qna_comment where qna_no = $post_no";
+    $review_select = "select * from seungchanshop.qna_comment where qna_no = $post_no";
     $review_select_result = mysqli_query($con, $review_select);
     $review_count_row = mysqli_num_rows($review_select_result);
 
 
     // 댓글 삭제 AJAX POST DATA 처리
     $delete_comment_no = $_POST['delete_comment_no'];
-    $delete_comment = "delete from seungchanshop25.qna_comment WHERE comment_no= $delete_comment_no";
+    $delete_comment = "delete from seungchanshop.qna_comment WHERE comment_no= $delete_comment_no";
     $delete_result = mysqli_query($con, $delete_comment);
 
     // 댓글 수정 AJAX POST DATA 처리
     $fix_comment_no = $_POST['fix_comment_no'];
     $fixed_review = $_POST['fixed_review'];
-    $update_review = "update seungchanshop25.qna_comment set qna_comment = '$fixed_review' WHERE comment_no= $fix_comment_no";
+    $update_review = "update seungchanshop.qna_comment set qna_comment = '$fixed_review' WHERE comment_no= $fix_comment_no";
     $update_result = mysqli_query($con, $update_review);
 ?>
 <?php include "info/qna_comment_pagination.php";?>
@@ -77,8 +77,8 @@
                 <div class="review_num">답글(<?=$review_count_row?>)</div>
                     <ul class="review_spot">
                     <?php
-                        $con = mysqli_connect("localhost","seungchanshop25","tmdcks2416!","seungchanshop25");
-                        $comment = 'select * from seungchanshop25.qna_comment where qna_no = '.$post_no.' order by created_at desc'.' '.$sqlLimit;
+                        $con = mysqli_connect("localhost","seungchanshop","tmdcks2416!","seungchanshop");
+                        $comment = 'select * from seungchanshop.qna_comment where qna_no = '.$post_no.' order by created_at desc'.' '.$sqlLimit;
                         $result = mysqli_query($con, $comment);
                         include "info/qna_comment_info.php";
                     ?>
@@ -109,8 +109,8 @@
       $review_comment = $_POST['review_comment'];
       $review_post_no = $_POST['review_post_no'];
 
-      $con = mysqli_connect("localhost","seungchanshop25","tmdcks2416!","seungchanshop25");
-      $sql = "insert into seungchanshop25.qna_comment(qna_no, user_id, qna_comment)";
+      $con = mysqli_connect("localhost","seungchanshop","tmdcks2416!","seungchanshop");
+      $sql = "insert into seungchanshop.qna_comment(qna_no, user_id, qna_comment)";
       $sql .= "values($review_post_no, '$review_userid', '$review_comment')";
       mysqli_query($con, $sql);
       mysqli_close($con); 

@@ -22,9 +22,9 @@
     global $comment;
 
 
-   $con = mysqli_connect("localhost","seungchanshop25","tmdcks2416!","seungchanshop25");
+   $con = mysqli_connect("localhost","seungchanshop","tmdcks2416!","seungchanshop");
     // [아이피], [아이디], [비밀번호], [DB명], [포트]);
-    $user_register = "insert into seungchanshop25.user(user_id, user_nickname, user_pw, user_name, user_birth, user_gender, user_email, user_phone, user_grade, comment)";
+    $user_register = "insert into seungchanshop.user(user_id, user_nickname, user_pw, user_name, user_birth, user_gender, user_email, user_phone, user_grade, comment)";
     $user_register .= "values('$user_id', '$user_nickname', '$user_pw', '$user_name','$user_birth','$user_gender','$user_email', '$user_phone', $user_grade, '$comment')";
     // 유저 등급 default 는 1 => 일반멤버
     mysqli_query($con, $user_register);

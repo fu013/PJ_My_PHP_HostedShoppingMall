@@ -9,8 +9,8 @@
     $onePage = 5;
     // 한페이지에 보여줄 게시글수
 
-    $con = mysqli_connect("localhost","seungchanshop25","tmdcks2416!","seungchanshop25");
-    $product_miyaong = "select * from seungchanshop25.comment where product_autoNum = $post_no";
+    $con = mysqli_connect("localhost","seungchanshop","tmdcks2416!","seungchanshop");
+    $product_miyaong = "select * from seungchanshop.comment where product_autoNum = $post_no";
     $product_miyaongR = mysqli_query($con, $product_miyaong);
     $product_count_row = mysqli_num_rows($product_miyaongR); // 총로우개수
 
@@ -20,7 +20,7 @@
     
     $sqlLimit = ' limit ' . $currentLimit . ', ' . $onePage; //limit sql 구문 => 0, 0+12 / 12, 0+24
 
-    $product_select = 'select * from seungchanshop25.comment'.' '.$sqlLimit; // 프로덕트에 대한정보 + 해당 프로덕트넘버와 같은 프로덕트넘버를 가진 메인이미지네임을 가져옴.
+    $product_select = 'select * from seungchanshop.comment'.' '.$sqlLimit; // 프로덕트에 대한정보 + 해당 프로덕트넘버와 같은 프로덕트넘버를 가진 메인이미지네임을 가져옴.
     // 리밋을 써서 1페이지일떄 1~5로우열 2페이지일때 5~10로우열 3일떄 10~15 이런식으로 가져오게만들어서 sql문의 날짜 내림차순으로 순차적으로 그리고 5개씩 가져오게만든다.
     // $sqlLimit  = $page = 1일떄 0, 12 // $page = 2 일떄 12, 24 // 이런식으로 배열의 []번쨰 순서를 가져옴
 

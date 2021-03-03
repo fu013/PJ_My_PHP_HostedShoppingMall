@@ -7,9 +7,15 @@
 		$page = 1;
     }
     $onePage = 5;
+
+    $countBasket;
+    $product_count_row; // 값이 null인애는 세지 않음
+
     // 한페이지에 보여줄 게시글수
-    
-    $product_count_row = count($_SESSION["shopping_cart"]); // 값이 null인애는 세지 않음
+    if(isset($_SESSION["shopping_cart"])) {
+        $countBasket = $_SESSION["shopping_cart"];
+        $product_count_row = count($countBasket); 
+    }
 
     $firstLimit = ($onePage * $page) - $onePage;
     $secondLimit = $firstLimit + $onePage;

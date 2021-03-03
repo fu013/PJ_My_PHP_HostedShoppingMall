@@ -1,10 +1,10 @@
 <?php include "info/like_pagination.php";?>
 <?php
-  $con = mysqli_connect("localhost","seungchanshop25","tmdcks2416!","seungchanshop25");
+  $con = mysqli_connect("localhost","seungchanshop","tmdcks2416!","seungchanshop");
   session_start();
   if(isset($_SESSION["login_user_id"])) { 
       $user_id = $_SESSION["login_user_id"];
-      $sql = $like_select = "select * from seungchanshop25.user_like where user_id = '$user_id' order by created_at desc".' '.$sqlLimit;
+      $sql = $like_select = "select * from seungchanshop.user_like where user_id = '$user_id' order by created_at desc".' '.$sqlLimit;
       $result = mysqli_query($con, $sql);
   } else {
       $user_id = '';
@@ -43,7 +43,7 @@
                       <li class='like_product'>
                         <div class='inner_img'>
                           <a href=shop_info.php?post_no=$like_array[product_autoNum]>
-                            <img src=$like_array[main_img_dir_name] style='width: 200px; height: 200px;'>
+                            <img src='$like_array[main_img_dir_name]' style='width: 200px; height: 200px;'>
                           </a>
                           <input type='checkbox' class='check_box'>
                         </div>

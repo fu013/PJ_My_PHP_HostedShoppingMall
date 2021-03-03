@@ -5,8 +5,8 @@
 	$inquire_title = $_POST["inquire_title"];
     $inquire_content = $_POST["inquire_content"];
     
-    $con = mysqli_connect("localhost","seungchanshop25","tmdcks2416!","seungchanshop25");
-	$sql = "insert into seungchanshop25.qna(user_id, qna_category, qna_title, qna_content)";
+    $con = mysqli_connect("localhost","seungchanshop","tmdcks2416!","seungchanshop");
+	$sql = "insert into seungchanshop.qna(user_id, qna_category, qna_title, qna_content)";
 	$sql .= "values ('$inquire_id', '$inquire_category', '$inquire_title', '$inquire_content')";
     mysqli_query($con, $sql);
 
