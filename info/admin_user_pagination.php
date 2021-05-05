@@ -8,9 +8,9 @@
     }
     $onePage = 10;
 
-    $con = mysqli_connect("localhost","seungchanshop","tmdcks2416!","seungchanshop");
+    $con = mysqli_connect("localhost","seungchanshop25","tmdcks2416!","seungchanshop25");
     
-    $product_miyaong = "select count(*) count from seungchanshop.user";
+    $product_miyaong = "select count(*) count from seungchanshop25.user";
     $miyaong_result = mysqli_query($con, $product_miyaong);
     $product_count =  mysqli_fetch_array($miyaong_result);
     $product_count_row = $product_count['count'];
@@ -18,7 +18,7 @@
     $currentLimit = ($onePage * $page) - $onePage; // 1페이지 일때, 12-12 = 0,12; 2페이지일때 12,24 가져옴
     $sqlLimit = ' limit ' . $currentLimit . ', ' . $onePage; //limit sql 구문 => 0, 0+12 / 12, 0+24
 
-    $product_select = "select user_no, user_id, user_nickname, user_pw, user_name, user_birth, user_gender, user_email, user_phone, user_grade, comment, created_at FROM seungchanshop.user order by created_at desc".' '.$sqlLimit; 
+    $product_select = "select user_no, user_id, user_nickname, user_pw, user_name, user_birth, user_gender, user_email, user_phone, user_grade, comment, created_at FROM seungchanshop25.user order by created_at desc".' '.$sqlLimit; 
 
     // $sqlLimit  = $page = 1일떄 0, 12 // $page = 2 일떄 12, 24 // 이런식으로 배열의 []번쨰 순서를 가져옴
     $product_select_result = mysqli_query($con, $product_select); // => sql 결과값을 담음 (프로덕트넘버가 있는 컬럼값을 모두담음)(어차피 무조건 있기때문에 전체 프로덕트값을 가져옴).

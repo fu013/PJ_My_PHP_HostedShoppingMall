@@ -1,12 +1,12 @@
 <?php
-  $con = mysqli_connect("localhost","seungchanshop","tmdcks2416!","seungchanshop");
+  $con = mysqli_connect("localhost","seungchanshop25","tmdcks2416!","seungchanshop25");
 
-  $user_count = "select count(*) count from seungchanshop.user";
+  $user_count = "select count(*) count from seungchanshop25.user";
   $user_count_result = mysqli_query($con, $user_count);
   $user_count_array =  mysqli_fetch_array($user_count_result);
   $user_count_row = $user_count_array['count'];
 
-  $product_count = "select count(*) count from seungchanshop.product";
+  $product_count = "select count(*) count from seungchanshop25.product";
   $product_count_result = mysqli_query($con, $product_count);
   $product_count_array =  mysqli_fetch_array($product_count_result);
   $product_count_row = $product_count_array['count'];

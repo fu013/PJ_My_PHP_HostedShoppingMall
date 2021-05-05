@@ -21,7 +21,7 @@
 	// as는 무조건 배열의 값을 의미함
 	// count($_files['file']['name']) 배열갯수 구하는 php 매서드 // array.length(); 와 같은기능	
 
-	$con = mysqli_connect("localhost","seungchanshop","tmdcks2416!","seungchanshop");
+	$con = mysqli_connect("localhost","seungchanshop25","tmdcks2416!","seungchanshop25");
 
 	$db_product_no = "select * from product where product_no = '$product_no'";
 	$db_product_name = "select * from product where product_name = '$product_name'";
@@ -45,7 +45,7 @@
 			</script>
 		";
 	} else { // 상품번호, 상품명이 모두 중복이 아닐경우 쿼리문 정상실행
-		$sql = "insert into seungchanshop.product(product_no, product_category, product_name, product_price, product_guideline, product_size, product_color, product_comment)";
+		$sql = "insert into seungchanshop25.product(product_no, product_category, product_name, product_price, product_guideline, product_size, product_color, product_comment)";
 		$sql .= "values ('$product_no', '$product_category', '$product_name', '$product_price', '$product_guideline', '$product_size', '$product_color', '$product_comment')";
 		mysqli_query($con, $sql);
 
@@ -58,7 +58,7 @@
 
 		$main_img_save_name = $main_img_dir.$product_main_img_name;
 		$main_img_upload_name = $main_img_user_dir.$product_main_img_name;
-		$sql_main_images = "insert into seungchanshop.images_main(product_no, main_img_dir_name, main_img_type, main_img_size_bytes)";
+		$sql_main_images = "insert into seungchanshop25.images_main(product_no, main_img_dir_name, main_img_type, main_img_size_bytes)";
 		$sql_main_images .= "values ('$product_no', '$main_img_upload_name', '$product_main_img_type', $product_main_img_size)";
 		mysqli_query($con, $sql_main_images);
 
@@ -111,7 +111,7 @@
 			//    exit;
 			//  }
 			if (move_uploaded_file($_FILES['product_img']['tmp_name'][$f], $dir_upload_img_name) == true) {		
-				$sql_images = "insert into seungchanshop.images(product_no, img_name, img_route, img_type, img_size_bytes)";
+				$sql_images = "insert into seungchanshop25.images(product_no, img_name, img_route, img_type, img_size_bytes)";
 				$sql_images .= "values ('$product_no', '$use_image_name', '$dir_upload_img_name', '$product_img_type', '$product_img_size')";
 				mysqli_query($con, $sql_images);	
 			}

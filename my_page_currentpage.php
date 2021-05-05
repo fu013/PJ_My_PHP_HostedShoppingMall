@@ -1,5 +1,5 @@
 <?php
-  $con = mysqli_connect("localhost","seungchanshop","tmdcks2416!","seungchanshop");
+  $con = mysqli_connect("localhost","seungchanshop25","tmdcks2416!","seungchanshop25");
   $view_arr = explode(",",$_COOKIE['goods_view']);
   unset($view_arr[0]); // [1]부터 시작하므로 0번쨰 Null 배열인덱스 삭제후 rearrange
   $view_arr = array_values($view_arr);

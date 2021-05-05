@@ -1,9 +1,9 @@
 <?php
-    $con = mysqli_connect("localhost","seungchanshop","tmdcks2416!","seungchanshop");
+    $con = mysqli_connect("localhost","seungchanshop25","tmdcks2416!","seungchanshop25");
     
     $request_user_email = $_POST['request_user_email'];
 
-    $request_user_select = "select * from seungchanshop.user where user_email = '$request_user_email'";
+    $request_user_select = "select * from seungchanshop25.user where user_email = '$request_user_email'";
     $request_user_select_result = mysqli_query($con, $request_user_select);
     $request_user_select_num =  mysqli_num_rows($request_user_select_result);
     

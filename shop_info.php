@@ -1,6 +1,6 @@
 <?php
   $post_no  = $_GET["post_no"];
-  $con = mysqli_connect("localhost","seungchanshop","tmdcks2416!","seungchanshop");
+  $con = mysqli_connect("localhost","seungchanshop25","tmdcks2416!","seungchanshop25");
   session_start();
     if(isset($_SESSION["login_user_id"])) { 
         $user_id = $_SESSION["login_user_id"];
@@ -28,7 +28,7 @@
 		}
   }
 
-  $select_view = "select product_view from seungchanshop.product where product_autoNum = $post_no";
+  $select_view = "select product_view from seungchanshop25.product where product_autoNum = $post_no";
   $select_view_result = mysqli_query($con, $select_view);
   $select_view_result_array = mysqli_fetch_array($select_view_result);
   $post_view = $select_view_result_array['product_view'];
@@ -46,20 +46,20 @@
   $product_select_array = mysqli_fetch_array($product_select_result);
 
   // $con = mysqli_connect("localhost","root","root","seungchan_shop","3306");
-  $review_select = "select * from seungchanshop.comment where product_autoNum = $post_no";
+  $review_select = "select * from seungchanshop25.comment where product_autoNum = $post_no";
   $review_select_result = mysqli_query($con, $review_select);
   $review_count_row = mysqli_num_rows($review_select_result);
 
 
   // 댓글 삭제 AJAX POST DATA 처리
   $delete_comment_no = $_POST['delete_comment_no'];
-  $delete_comment = "delete from seungchanshop.comment WHERE comment_no= $delete_comment_no";
+  $delete_comment = "delete from seungchanshop25.comment WHERE comment_no= $delete_comment_no";
   $delete_result = mysqli_query($con, $delete_comment);
 
   // 댓글 수정 AJAX POST DATA 처리
   $fix_comment_no = $_POST['fix_comment_no'];
   $fixed_review = $_POST['fixed_review'];
-  $update_review = "update seungchanshop.comment set comment_text = '$fixed_review' WHERE comment_no= $fix_comment_no";
+  $update_review = "update seungchanshop25.comment set comment_text = '$fixed_review' WHERE comment_no= $fix_comment_no";
   $update_result = mysqli_query($con, $update_review);
 ?>
 
@@ -184,8 +184,8 @@
             </div>
             <div class="review_spot">
                 <?php
-               $con = mysqli_connect("localhost","seungchanshop","tmdcks2416!","seungchanshop");
-                $comment = 'select * from seungchanshop.comment where product_autoNum = '.$post_no.' order by created_at desc'.' '.$sqlLimit;
+               $con = mysqli_connect("localhost","seungchanshop25","tmdcks2416!","seungchanshop25");
+                $comment = 'select * from seungchanshop25.comment where product_autoNum = '.$post_no.' order by created_at desc'.' '.$sqlLimit;
                 $result = mysqli_query($con, $comment);
                 include "info/comment_info.php";
               ?>
@@ -260,7 +260,7 @@
       $review_product_name = $_POST['review_product_name'];
       $review_prodcut_size = $_POST['review_prodcut_size'];
 
-        $con = mysqli_connect("localhost","seungchanshop","tmdcks2416!","seungchanshop");
+        $con = mysqli_connect("localhost","seungchanshop25","tmdcks2416!","seungchanshop25");
       $sql = "insert into comment(product_autoNum, main_img_dir_name, user_nickname, comment_text, product_satisfaction, product_size, product_name)";
       $sql .= "values($review_post_no, '$review_imgName', '$review_userNickname', '$review_comment', '$review_satisfaction', '$review_prodcut_size', '$review_product_name')";
       mysqli_query($con, $sql);

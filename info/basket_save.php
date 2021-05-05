@@ -5,7 +5,7 @@
 
   if(isset($_POST["basket_post_no"])) { // basket_post_no 라는 속성 키값이 포스트방식값으로 왔을때,
     
-    $con = mysqli_connect("localhost","seungchanshop","tmdcks2416!","seungchanshop");
+    $con = mysqli_connect("localhost","seungchanshop25","tmdcks2416!","seungchanshop25");
     $basket_select = "select product_autoNum, product_category, product_name, product_price, product_size, product_color, main_img_dir_name from product p inner join images_main im on p.product_no = 
     im.product_no where product_autoNum = $basket_post_no";
     $basket_result = mysqli_query($con, $basket_select);

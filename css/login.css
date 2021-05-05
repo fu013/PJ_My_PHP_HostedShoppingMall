@@ -20,7 +20,7 @@ transition: all 0.5s; vertical-align: middle; border-radius: 3px;}
  width: 525px; height: 475px; transform: translate(-50%, -50%); 
  border: 1px solid black; padding: 30px 25px 30px; box-sizing: border-box; z-index: 100; background: #fff;}
 .popup_login h2 { padding: 0 0 42px; border-bottom: 2px solid #444; font-weight: normal; font-size: 36px; color: #222; text-align: center; line-height: 100%; }
-.popup_login .close { position:absolute; right: 0; top: 0; width:41px; height:41px; background: url(../img/close_use.png) no-repeat; color: transparent; right: 40px; top: 40px;}
+.popup_login .close { position: absolute; right: 0; top: 0; width:41px; height:41px; background: url(../img/close_use.png) no-repeat; right: 40px; top: 40px;}
 .popup_login .con { padding: 0 48px; border-bottom: 1px solid #e8e8e8; margin: 0 0 20px 0; }
 .dim { display: none; position: fixed; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 99;}
 

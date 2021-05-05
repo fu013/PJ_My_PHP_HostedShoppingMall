@@ -1,5 +1,5 @@
 <?php
-  $con = mysqli_connect("localhost","seungchanshop","tmdcks2416!","seungchanshop");
+  $con = mysqli_connect("localhost","seungchanshop25","tmdcks2416!","seungchanshop25");
   // 세션 유저 정보 가져오기 
   session_start();
   if(isset($_SESSION["login_user_id"])) { 
@@ -25,7 +25,7 @@
   }
   global $grade;
 
-  $user_select = "select * from seungchanshop.user where user_id = '$user_id'";
+  $user_select = "select * from seungchanshop25.user where user_id = '$user_id'";
   $user_select_result = mysqli_query($con, $user_select);
   $user_select_array =  mysqli_fetch_array($user_select_result);
 
@@ -34,17 +34,17 @@
   $view_arr = array_values($view_arr);
   $view_count = count($view_arr);
   
-  $like_count = "select count(*) like_count from seungchanshop.user_like";
+  $like_count = "select count(*) like_count from seungchanshop25.user_like";
   $like_count_result = mysqli_query($con, $like_count);
   $like_count_array =  mysqli_fetch_array($like_count_result);
   $like_count_row = $like_count_array['like_count'];
 
-  $jjim_count = "select count(*) jjim_count from seungchanshop.user_jjim";
+  $jjim_count = "select count(*) jjim_count from seungchanshop25.user_jjim";
   $jjim_count_result = mysqli_query($con, $jjim_count);
   $jjim_count_array =  mysqli_fetch_array($jjim_count_result);
   $jjim_count_row = $jjim_count_array['jjim_count'];
 
-  $qna_count = "select count(*) qna_count from seungchanshop.qna";
+  $qna_count = "select count(*) qna_count from seungchanshop25.qna";
   $qna_count_result = mysqli_query($con, $qna_count);
   $qna_count_array =  mysqli_fetch_array($qna_count_result);
   $qna_count_row = $qna_count_array['qna_count'];

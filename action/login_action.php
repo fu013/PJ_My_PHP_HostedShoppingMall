@@ -4,7 +4,7 @@
     $login_id = $_POST["login_id"];
     $login_pw = $_POST["login_pw"];
 
-    $con = mysqli_connect("localhost","seungchanshop","tmdcks2416!","seungchanshop");
+    $con = mysqli_connect("localhost","seungchanshop25","tmdcks2416!","seungchanshop25");
     $sql = "select * from user where user_id = '$login_id'";
     $result = mysqli_query($con, $sql); // 사용자가 로그인을 요청해온 아이디값을 변수에 담는다.
     $num_match = mysqli_num_rows($result); // 해당아이디에 매치되는 컬럼값을 가진 로우 개수를 세서 저장함.

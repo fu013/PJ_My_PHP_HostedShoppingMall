@@ -1,10 +1,10 @@
 <?php include "info/jjim_pagination.php";?>
 <?php
- $con = mysqli_connect("localhost","seungchanshop","tmdcks2416!","seungchanshop");
+ $con = mysqli_connect("localhost","seungchanshop25","tmdcks2416!","seungchanshop25");
   session_start();
   if(isset($_SESSION["login_user_id"])) { 
       $user_id = $_SESSION["login_user_id"];
-      $sql = $like_select = "select * from seungchanshop.user_jjim where user_id = '$user_id' order by created_at desc".' '.$sqlLimit;
+      $sql = $like_select = "select * from seungchanshop25.user_jjim where user_id = '$user_id' order by created_at desc".' '.$sqlLimit;
       $result = mysqli_query($con, $sql);
   } else {
       $user_id = '';
